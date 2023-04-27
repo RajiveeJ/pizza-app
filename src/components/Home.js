@@ -16,9 +16,17 @@ class Home extends Component {
   }
 
   handleChange = (e) => {
-    this.setState({ postcode: e.target.value })
+   
     this.setState({ un: e.target.value })
+ 
+  }
+  handleChange1 = (e) => {
+    
     this.setState({ pass: e.target.value })
+  }
+  handleChange2 = (e) => {
+    this.setState({ postcode: e.target.value })
+   
   }
 
   handlePostcodeSubmit = () => {
@@ -58,8 +66,8 @@ class Home extends Component {
               <Form.Group >
                   
                     <Form.Input placeholder='Enter your username' name='un' onChange={this.handleChange} value={this.state.un}  required id='home-form1'/>
-                  <Form.Input placeholder='Enter your password' name='pass' onChange={this.handleChange} value={this.state.pass}  required id='home-form2'/>
-                <Form.Input placeholder='Enter your postcode' name='postcode' onChange={this.handleChange} value={this.state.postcode} width={4} required id='home-form3'/>
+                  <Form.Input placeholder='Enter your password' name='pass' onChange={this.handleChange1} value={this.state.pass}  required id='home-form2'/>
+                <Form.Input placeholder='Enter your postcode' name='postcode' onChange={this.handleChange2} value={this.state.postcode} width={4} required id='home-form3'/>
                 <Form.Button type='submit' color='teal' size='large' width={4} id='home-btn'>Get Started</Form.Button>
               </Form.Group>
               <Label color='orange' size='medium' id='home-label'><span role='img' aria-label='point-right'>👉</span> Hint: username - admin password - admin123 postcode 'LDN 123' right now</Label>
