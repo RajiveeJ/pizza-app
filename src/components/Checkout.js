@@ -42,7 +42,7 @@ class Checkout extends Component {
 
   handleSubmit = () => {
     this.checkCustomerForm();
-
+    this.checkPaymentForm();
     if(this.state.customerForm && this.state.paymentForm) {
       this.setState({ completedForm: true });
       alert("Successfully ordered!!!! Will be delivered on time!!!");
