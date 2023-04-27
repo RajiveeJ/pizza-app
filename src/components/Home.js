@@ -10,17 +10,23 @@ class Home extends Component {
 
   state = {
     postcode: '',
+    un:'',
+    pass:'',
     validPostcode: true
   }
 
   handleChange = (e) => {
     this.setState({ postcode: e.target.value })
+    this.setState({ un: e.target.value })
+    this.setState({ pass: e.target.value })
   }
 
   handlePostcodeSubmit = () => {
     const formattedPostcode = this.state.postcode.toUpperCase().replace(/\s/g, "");
+    const formattedun = this.state.un.toUpperCase().replace(/\s/g, "");
+    const formattedpass = this.state.pass.toUpperCase().replace(/\s/g, "");
 
-    if(formattedPostcode === 'LDN123') {
+    if(formattedPostcode === 'LDN123' && formattedun === 'ADMIN' && formattedpass === 'ADMIN123' ) {
       this.props.history.push('/menu');
       this.setState({
         postcode: formattedPostcode
@@ -50,10 +56,13 @@ class Home extends Component {
             <Header as='h1' id="home-header">Delicious pizzas delivered to your doorstep</Header>
             <Form size='large' onSubmit={this.handlePostcodeSubmit} fluid='true'>
               <Form.Group >
+                  
+                    <Form.Input placeholder='Enter your username' name='un' onChange={this.handleChange} value={this.state.un}  required id='home-form'/>
+                  <Form.Input placeholder='Enter your password' name='pass' onChange={this.handleChange} value={this.state.pass}  required id='home-form'/>
                 <Form.Input placeholder='Enter your postcode' name='postcode' onChange={this.handleChange} value={this.state.postcode} width={4} required id='home-form'/>
                 <Form.Button type='submit' color='teal' size='large' width={4} id='home-btn'>Get Started</Form.Button>
               </Form.Group>
-              <Label color='orange' size='medium' id='home-label'><span role='img' aria-label='point-right'>👉</span> Hint: We only deliver to postcode 'LDN 123' right now</Label>
+              <Label color='orange' size='medium' id='home-label'><span role='img' aria-label='point-right'>👉</span> Hint: username - admin password - admin123 postcode 'LDN 123' right now</Label>
             </Form>
           </Container>
         </Container>
