@@ -4,6 +4,8 @@ import {StripeProvider} from 'react-stripe-elements';
 import { PizzaList } from '../data/pizzas';
 import { sampleCustomer } from '../data/sampleCustomer';
 
+import Login from './Login';
+import Signup from './Signup';
 import Home from './Home';
 import Menu from './Menu';
 import Cart from './Cart';
@@ -121,7 +123,7 @@ class App extends Component {
         <Fragment>
           <Switch>
             <Route exact path='/' render={ (props) =>
-              <Home {...props}
+              <Login {...props}
               updatePostcode={this.updatePostcode} /> } />
             <Route exact path='/menu' render={ (props) =>
               <Menu {...props}
