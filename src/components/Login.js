@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Home from './Home'
 
-import "../styles.css";
+import "./styles.css";
 // import Signup from "./Signup";
 
 function Login(){
