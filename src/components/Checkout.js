@@ -47,8 +47,7 @@ class Checkout extends Component {
       this.setState({ completedForm: true });
       alert("Successfully ordered!!!! Will be delivered on time!!!");
     } else {
-      this.setState({ completedForm: false });
-      alert("fill!!!");
+        alert("fill!!!");
     }
   }
 
