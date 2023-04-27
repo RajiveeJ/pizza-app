@@ -9,7 +9,7 @@ import NavBar from './NavBar';
 import CustomerDetailsForm from './CustomerDetailsForm';
 import PaymentForm from './PaymentForm';
 import Footer from './Footer';
-import Paid from './Paid';
+
 class Checkout extends Component {
 
   static propTypes = {
@@ -42,7 +42,8 @@ class Checkout extends Component {
 
   handleSubmit = () => {
     
-      <Paid />
+      alert("Successfully ordered!!!! Will be delivered on time!!!");
+     
     
   }
 
