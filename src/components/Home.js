@@ -34,7 +34,7 @@ class Home extends Component {
     const formattedun = this.state.un.toUpperCase().replace(/\s/g, "");
     const formattedpass = this.state.pass.toUpperCase().replace(/\s/g, "");
 
-    if(formattedPostcode === 'LDN123' && formattedun === 'ADMIN' && formattedpass === 'ADMIN123' ) {
+    if(formattedPostcode === 'LDN123' && formattedun === 'ADMIN@GMAIIL.COM' && formattedpass === 'ADMIN123' ) {
       this.props.history.push('/menu');
       this.setState({
         postcode: formattedPostcode
@@ -70,7 +70,7 @@ class Home extends Component {
                 <Form.Input placeholder='Enter your postcode' name='postcode' onChange={this.handleChange2} value={this.state.postcode} width={4} required id='home-form3'/>
                 <Form.Button type='submit' color='teal' size='large' width={4} id='home-btn'>Get Started</Form.Button>
               </Form.Group>
-              <Label color='orange' size='medium' id='home-label'><span role='img' aria-label='point-right'>👉</span> Hint: username - admin password - admin123 postcode 'LDN 123' right now</Label>
+              <Label color='orange' size='medium' id='home-label'><span role='img' aria-label='point-right'>👉</span> Hint: username - admin@gmail.com password - admin123 postcode 'LDN 123' right now</Label>
             </Form>
           </Container>
         </Container>
