@@ -34,7 +34,7 @@ class Home extends Component {
     const formattedun = this.state.un.toUpperCase().replace(/\s/g, "");
     const formattedpass = this.state.pass.toUpperCase().replace(/\s/g, "");
 
-    if(formattedPostcode === 'LDN123' && formattedun === 'ADMIN@GMAIIL.COM' && formattedpass === 'ADMIN123' ) {
+    if(formattedPostcode === 'LDN123' && formattedun === 'ADMIN@GMAIL.COM' && formattedpass === 'ADMIN123' ) {
       this.props.history.push('/menu');
       this.setState({
         postcode: formattedPostcode
