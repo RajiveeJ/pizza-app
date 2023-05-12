@@ -46,7 +46,7 @@ class Home extends Component {
       });
     }
     if(formattedun !== 'ADMIN@GMAIL.COM'|| formattedpass !== 'ADMIN123' ) {
-      this.props.history.push('/menu');
+      
       alert("Invalid Username or Password");
     } 
     
