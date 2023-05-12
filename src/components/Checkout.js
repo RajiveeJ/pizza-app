@@ -73,7 +73,7 @@ class Checkout extends Component {
                 <PaymentForm formStatus={this.checkPaymentForm} />
               </Elements>
               <a class="nav-link" href="/cart">Pay now {formatPrice(this.props.checkoutTotal)}</a>
-              <Button color='teal' size='large' id='checkout-btn' onClick={this.handleSubmit}>Place Order & Pay {formatPrice(this.props.checkoutTotal)} </Button>
+              <Button color='teal' size='large' id='checkout-btn'  as={Link} to='/confirmed'>Place Order & Pay {formatPrice(this.props.checkoutTotal)} </Button>
             </Grid.Column>
           </Grid>
         </Container>
