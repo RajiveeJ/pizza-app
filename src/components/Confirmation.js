@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Container, Header, Menu, Image, Button } from 'semantic-ui-react';
+import { Container, Header, Menu, Button } from 'semantic-ui-react';
 
 import Footer from './Footer';
 
@@ -34,11 +34,11 @@ class Confirmation extends Component {
       </Menu>
         <Container textAlign='center' id='confirmation-container'>
           <Header as='h1' id='page-header'>Thanks, {firstName}!</Header>
-          <p id='confirmation-text'>Your order, <strong>#2222</strong> is now being prepped and will be delivered to: </p>
+          <p id='confirmation-text'>Your order  is now being prepared and will be delivered to: </p>
           <p><strong>{address}</strong></p>
           <p>within the next hour <span role='img' aria-label='motorcycle'>🛵</span> </p>
-          <Image centered id='confirmation-img'  src='https://media.giphy.com/media/j1p1Z7XaX8HEQ/giphy.gif' />
-          <Button onClick={this.handleClick} color='teal' size='large' id='confirmation-new-btn'>Start a fresh order</Button>
+          
+          <Button onClick={this.handleClick} color='teal' size='large' id='confirmation-new-btn'>Start a fresh order or Logout</Button>
         </Container>
         <Footer />
       </Fragment>
