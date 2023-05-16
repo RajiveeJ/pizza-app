@@ -85,10 +85,10 @@ class Home extends Component {
         <Modal open={!this.state.validPostcode} size='mini' id='home-modal'>
           <Modal.Header>We'd love to send you a slice of the action, but..</Modal.Header>
           <Modal.Content>
-            <p>It looks like you're located outside our delivery area <span role='img' aria-label='cat-sad'>😿</span></p>
+            <p>It looks like you're located outside our delivery area or invalid credentials <span role='img' aria-label='cat-sad'>😿</span></p>
           </Modal.Content>
           <Modal.Actions>
-            <Button onClick={this.closeModal} color='violet'>Try a different postcode</Button>
+            <Button onClick={this.closeModal} color='violet'>Try a different postcode or credentials</Button>
           </Modal.Actions>
        </Modal>
      </div>
