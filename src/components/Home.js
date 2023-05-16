@@ -52,15 +52,7 @@ class Home extends Component {
         validPostcode: false
       });
     }
-    if(formattedun !== 'ADMIN@GMAIL.COM'|| formattedpass !== 'ADMIN123'){
-      
-      alert("Invalid admin Username or Password");
-    } 
-    else if(formattedun !== 'DEMO@GMAIL.COM'|| formattedpass !== 'DEMO123' ){
-      alert("Invalid  Username or Password");
-    }
-    
-  }
+   
 
   closeModal = () => {
     this.setState({
