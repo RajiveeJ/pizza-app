@@ -60,7 +60,7 @@ class Home extends Component {
       validPostcode: true
     });
   }
-
+  }
   render(){
 
     return(
