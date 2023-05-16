@@ -52,7 +52,7 @@ class Home extends Component {
         validPostcode: false
       });
     }
-   
+  }
 
   closeModal = () => {
     this.setState({
@@ -60,7 +60,7 @@ class Home extends Component {
       validPostcode: true
     });
   }
-  }
+  
   render(){
 
     return(
