@@ -40,12 +40,19 @@ class Home extends Component {
         postcode: formattedPostcode
       });
       this.props.updatePostcode(formattedPostcode);
+    } 
+    else if(formattedPostcode === 'LDN123' && formattedun === 'DEMO@GMAIL.COM' && formattedpass === 'DEMO123' ) {
+      this.props.history.push('/menu');
+      this.setState({
+        postcode: formattedPostcode
+      });
+      this.props.updatePostcode(formattedPostcode);
     } else {
       this.setState({
         validPostcode: false
       });
     }
-    if(formattedun !== 'ADMIN@GMAIL.COM'|| formattedpass !== 'ADMIN123' ) {
+    if(formattedun !== 'ADMIN@GMAIL.COM'|| formattedpass !== 'ADMIN123' || formattedun !== 'DEMO@GMAIL.COM'|| formattedpass !== 'DEMO123' ) {
       
       alert("Invalid Username or Password");
     } 
@@ -75,7 +82,7 @@ class Home extends Component {
                 <Form.Input placeholder='Enter your postcode' name='postcode' onChange={this.handleChange2} value={this.state.postcode} width={4} required id='home-form3'/>
                 <Form.Button type='submit' color='teal' size='large' width={4} id='home-btn'>Get Started</Form.Button>
               </Form.Group>
-              <Label color='orange' size='medium' id='home-label'><span role='img' aria-label='point-right'>👉</span> Hint: username - admin@gmail.com password - admin123 postcode 'LDN 123' right now</Label>
+              <Label color='orange' size='medium' id='home-label'><span role='img' aria-label='point-right'>👉</span> Hint: username - admin@gmail.com | demo@gmail.com password - admin123|demo123 postcode 'LDN 123' right now</Label>
             </Form>
           </Container>
         </Container>
