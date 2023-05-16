@@ -58,6 +58,7 @@ class Home extends Component {
     } 
     else if(formattedun !== 'DEMO@GMAIL.COM'|| formattedpass !== 'DEMO123' ){
       alert("Invalid admin Username or Password");
+    }
     
   }
 
