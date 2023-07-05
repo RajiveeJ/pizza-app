@@ -7,6 +7,7 @@ import { sampleCustomer } from '../data/sampleCustomer';
 
 import Home from './Home';
 import Menu from './Menu';
+import Additem from './Additem';
 import Cart from './Cart';
 import Checkout from './Checkout';
 import Confirmation from './Confirmation';
