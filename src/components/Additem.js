@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Header, Container } from 'semantic-ui-react';
 
 import Footer from './Footer';
-import SplContainer from './SplContainer';
+import Splitem from './Splitem';
 
 const Additem = (props) => (
   <Fragment>
@@ -15,7 +15,7 @@ const Additem = (props) => (
       <Header as='h1' id='page-header'>Today's Special items</Header>
      
       <Container id='menu-pizza-container'>
-          <SplContainer addToOrder={props.addToOrder} />
+          <Splitem addToOrder={props.addToOrder} />
       </Container>
     </Container>
     <Footer />
