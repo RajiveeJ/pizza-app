@@ -15,7 +15,7 @@ const Additem = (props) => (
       <Header as='h1' id='page-header'>Today's Special items</Header>
      
       <Container id='menu-pizza-container'>
-          <Splitem addToOrder={props.addToOrder} />
+          <Splitem addToItem={props.addToItem} />
       </Container>
     </Container>
     <Footer />
@@ -25,7 +25,7 @@ const Additem = (props) => (
 Additem.propTypes = {
   order: PropTypes.array,
   orderTotal: PropTypes.number,
-  addToOrder: PropTypes.func.isRequired
+  addToItem: PropTypes.func.isRequired
 };
 
 export default Additem;
