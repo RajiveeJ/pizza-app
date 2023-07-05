@@ -129,6 +129,11 @@ class App extends Component {
                 orderTotal={this.state.orderTotal}
                 addToOrder={this.addToOrder}
                 order={this.state.order} /> } />
+            <Route exact path='/additem' render={ (props) =>
+              <Additem {...props}
+                orderTotal={this.state.orderTotal}
+                addToOrder={this.addToOrder}
+                order={this.state.order} /> } />
             <Route exact path='/cart' render={ (props) =>
               <Cart {...props}
                 orderTotal={this.state.orderTotal}
