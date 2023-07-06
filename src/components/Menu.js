@@ -6,6 +6,7 @@ import { Header, Container, Button } from 'semantic-ui-react';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import PizzaContainer from './PizzaContainer';
+import Splitem from './Splitem';
 
 const Menu = (props) => (
   <Fragment>
@@ -19,6 +20,11 @@ const Menu = (props) => (
       </Container>
       <Container id='menu-pizza-container'>
           <PizzaContainer addToOrder={props.addToOrder} />
+          <Item
+              order={this.props.order}
+              addToItem={this.props.addToItem}
+              
+            />
       </Container>
     </Container>
     <Footer />
