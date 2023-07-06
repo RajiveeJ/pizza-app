@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import {StripeProvider} from 'react-stripe-elements';
 import { PizzaList } from '../data/pizzas';
+import {SplList } from '../data/spllist';
 import { sampleCustomer } from '../data/sampleCustomer';
 
 
@@ -61,6 +62,17 @@ class App extends Component {
     });
   }
 
+  addToItem = (key) => {
+    const order = { ...this.state.order};
+    order[key] = order[key] + 1 || 1;
+    const newTotal = this.state.orderTotal + SplList[key].price;
+
+    this.setState({
+      order: order,
+      orderTotal: newTotal
+    });
+  }
+
   removeFromOrder = (key) => {
     const order = { ...this.state.order};
     order[key] = order[key] - 1;
@@ -68,6 +80,22 @@ class App extends Component {
 
     if(order[key] === 0) {
       newTotal = this.state.orderTotal - PizzaList[key].price;
+      delete order[key];
+    }
+
+    this.setState({
+      order: order,
+      orderTotal: newTotal
+    });
+  }
+
+  removeFromItem = (key) => {
+    const order = { ...this.state.order};
+    order[key] = order[key] - 1;
+    let newTotal = this.state.orderTotal - (SplList[key].price);
+
+    if(order[key] === 0) {
+      newTotal = this.state.orderTotal - SplList[key].price;
       delete order[key];
     }
 
@@ -129,11 +157,13 @@ class App extends Component {
               <Menu {...props}
                 orderTotal={this.state.orderTotal}
                 addToOrder={this.addToOrder}
+                addToItem={this.addToItem}
+                removeFromItem={this.removeFromItem}
                 order={this.state.order} /> } />
             <Route exact path='/additem' render={ (props) =>
               <Additem {...props}
                 orderTotal={this.state.orderTotal}
-                addToOrder={this.addToOrder}
+                addToItem={this.addToItem}
                 order={this.state.order} /> } />
             <Route exact path='/cart' render={ (props) =>
               <Cart {...props}
