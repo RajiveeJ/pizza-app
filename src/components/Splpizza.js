@@ -8,7 +8,7 @@ class Splpizza extends Component {
     addToItem: PropTypes.func.isRequired,
     details: PropTypes.object.isRequired
   }
-  close(){
+  close=()=>{
     alert("Item add Successfully!!!");
   }
   render(){
