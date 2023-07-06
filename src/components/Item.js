@@ -27,8 +27,8 @@ class Item extends Component {
               <p id='order-pizza-name'>{pizza.name}</p>
               <p><strong>{formatPrice(pizza.price)}</strong></p>
               <p>
-                <Icon name='minus' circular id="order-minus" onClick={() => this.props.removeFromOrder(key)} /> Quantity
-                <Icon name='plus' circular id="order-plus" onClick={() => this.props.addToOrder(key)} />
+                <Icon name='minus' circular id="order-minus" onClick={() => this.props.removeFromItem(key)} /> Quantity
+                <Icon name='plus' circular id="order-plus" onClick={() => this.props.addToItem(key)} />
                 <Button onClick={() => this.props.addToItem(this.props.index)} color='teal'>Add Item</Button>
               </p>
             </Grid.Column>
