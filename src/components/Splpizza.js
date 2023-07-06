@@ -22,7 +22,7 @@ class Splpizza extends Component {
           <div id='pizza-order-info'>
             <Header as='h3'>{formatPrice(price)}</Header>
             <p>
-              <Button onClick={() => this.close} color='teal'>Add Item</Button>
+              <Button onClick={this.close} color='teal'>Add Item</Button>
             </p>
           </div>
 
