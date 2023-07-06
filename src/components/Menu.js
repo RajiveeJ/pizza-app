@@ -23,12 +23,7 @@ const Menu = (props) => (
           <PizzaContainer addToOrder={props.addToOrder} />
           
       </Container>
-      <Container id='menu-pizza-container'>
-          <Item
-              order={this.props.order}
-              addToItem={this.props.addToItem}
-              
-            />
+     
       </Container>
     </Container>
     <Footer />
