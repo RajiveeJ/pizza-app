@@ -20,7 +20,7 @@ class Splpizza extends Component {
           <div id='pizza-order-info'>
             <Header as='h3'>{formatPrice(price)}</Header>
             <p>
-              <Button onClick={() => this.props.addToItem(this.props.index)} color='teal'>Add to order</Button>
+              <Button onClick={() => this.props.addToItem(this.props.index)} color='teal'>Add Item</Button>
             </p>
           </div>
 
