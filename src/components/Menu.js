@@ -10,6 +10,13 @@ import PizzaContainer from './PizzaContainer';
 
 
 const Menu = (props) => (
+   static propTypes = {
+    
+    addToOrder: PropTypes.func.isRequired,
+    
+    order: PropTypes.array,
+    
+  }
   <Fragment>
     <NavBar order={props.order} orderTotal={props.orderTotal}>
       {props.orderTotal > 0 && <Button as={Link} to='/cart' color='teal' id='menu-checkout-btn'>Checkout</Button>}
