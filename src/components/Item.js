@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Image, Segment, Icon } from 'semantic-ui-react';
+import { Grid, Image, Segment, Icon, Button } from 'semantic-ui-react';
 import { SplList } from '../data/spllist';
 import { formatPrice } from '../helpers';
 
@@ -27,7 +27,7 @@ class Item extends Component {
               <p id='order-pizza-name'>{pizza.name}</p>
               <p><strong>{formatPrice(pizza.price)}</strong></p>
               <p>
-                <Icon name='minus' circular id="order-minus" onClick={() => this.props.removeFromOrder(key)} /> Quantity: {count}
+                <Icon name='minus' circular id="order-minus" onClick={() => this.props.removeFromOrder(key)} /> Quantity
                 <Icon name='plus' circular id="order-plus" onClick={() => this.props.addToOrder(key)} />
                 <Button onClick={() => this.props.addToItem(this.props.index)} color='teal'>Add to order</Button>
               </p>
