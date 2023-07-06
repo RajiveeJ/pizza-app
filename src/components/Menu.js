@@ -6,7 +6,8 @@ import { Header, Container, Button } from 'semantic-ui-react';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import PizzaContainer from './PizzaContainer';
-import Splitem from './Splitem';
+
+import Item from './Item';
 
 const Menu = (props) => (
   <Fragment>
