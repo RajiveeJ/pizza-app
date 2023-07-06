@@ -5,7 +5,7 @@ import { Header, Container, Button } from 'semantic-ui-react';
 
 import NavBar from './NavBar';
 import Footer from './Footer';
-import Splitem from './Splitem';
+
 import PizzaContainer from './PizzaContainer';
 
 
@@ -22,7 +22,7 @@ const Menu = (props) => (
       </Container>
       <Container id='menu-pizza-container'>
           <PizzaContainer addToOrder={props.addToOrder} />
-          <Splitem addToItem={props.addToItem}/>
+          
       </Container>
      
       
@@ -33,10 +33,10 @@ const Menu = (props) => (
 
 Menu.propTypes = {
   order: PropTypes.array,
-   item: PropTypes.array,
+   
   orderTotal: PropTypes.number,
   addToOrder: PropTypes.func.isRequired,
-  addToItem: PropTypes.func.isRequired
+  
 };
 
 export default Menu;
