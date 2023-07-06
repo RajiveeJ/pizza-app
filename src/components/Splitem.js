@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from 'semantic-ui-react';
 import { SplList } from '../data/spllist';
-import Pizza from './Pizza';
+import Splpizza from './Splpizza';
 
 const Splitem = (props) => {
   let pizzas = Object.keys(SplList).map( key => {
-    return <Pizza
+    return <Splpizza
               key={key}
               details={SplList[key]}
-              addToOrder={props.addToOrder}
+              addToItem={props.addToOrder}
               index={key}
             />
   });
@@ -21,7 +21,7 @@ const Splitem = (props) => {
 }
 
 Splitem.propTypes = {
-  addToOrder: PropTypes.func.isRequired
+  addToItem: PropTypes.func.isRequired
 };
 
 export default Splitem;
