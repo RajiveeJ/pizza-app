@@ -1,6 +1,6 @@
 export const SplList = {
   pizza1: {
-    name: ' SPl Mary Nara',
+    name: ' Mary Nara',
     toppings: ['crushed tomatoes', 'garlic', 'oregano', 'basil', 'extra virgin olive oil',],
     image: "/assets/pizzas/marinara.jpg",
     price: 695
