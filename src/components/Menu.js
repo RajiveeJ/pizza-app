@@ -33,7 +33,7 @@ const Menu = (props) => (
 
 Menu.propTypes = {
   order: PropTypes.array,
-   item: Proptypes.array,
+   item: PropTypes.array,
   orderTotal: PropTypes.number,
   addToOrder: PropTypes.func.isRequired,
   addToItem: PropTypes.func.isRequired
