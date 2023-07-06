@@ -5,18 +5,12 @@ import { Header, Container, Button } from 'semantic-ui-react';
 
 import NavBar from './NavBar';
 import Footer from './Footer';
-import Order from './Order';
+import Item from './Item';
 import PizzaContainer from './PizzaContainer';
 
 
 const Menu = (props) => (
-   static propTypes = {
-    
-    addToOrder: PropTypes.func.isRequired,
-    
-    order: PropTypes.array,
-    
-  }
+   
   <Fragment>
     <NavBar order={props.order} orderTotal={props.orderTotal}>
       {props.orderTotal > 0 && <Button as={Link} to='/cart' color='teal' id='menu-checkout-btn'>Checkout</Button>}
@@ -28,10 +22,10 @@ const Menu = (props) => (
       </Container>
       <Container id='menu-pizza-container'>
           <PizzaContainer addToOrder={props.addToOrder} />
-          <Order
+          <Item
               order={this.props.order}
-              addToOrder={this.props.addToOrder}
-              removeFromOrder={this.props.removeFromOrder}
+              addToItem={this.props.addToItem}
+              
             />
       </Container>
      
@@ -44,7 +38,8 @@ const Menu = (props) => (
 Menu.propTypes = {
   order: PropTypes.array,
   orderTotal: PropTypes.number,
-  addToOrder: PropTypes.func.isRequired
+  addToOrder: PropTypes.func.isRequired,
+  addToItem: PropTypes.func.isRequired
 };
 
 export default Menu;
