@@ -23,7 +23,7 @@ const Additem = (props) => (
 );
 
 Additem.propTypes = {
-  order: PropTypes.array,
+  item: PropTypes.array,
   orderTotal: PropTypes.number,
   addToItem: PropTypes.func.isRequired
 };
