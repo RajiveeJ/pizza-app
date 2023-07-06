@@ -9,12 +9,12 @@ class Item extends Component {
   static propTypes = {
     addToItem: PropTypes.func.isRequired,
     
-    order: PropTypes.array
+    item: PropTypes.array
   }
 
-  renderOrder = (key) => {
+  renderItem = (key) => {
     const pizza = SplList[key];
-    const count = this.props.order[key];
+    const count = this.props.item[key];
 
     return(
       <Segment raised key={key}>
@@ -39,11 +39,11 @@ class Item extends Component {
   }
 
   render(){
-    const orderIds = Object.keys(this.props.order);
+    const itemIds = Object.keys(this.props.item);
 
     return(
       <div>
-          {orderIds.map(this.renderOrder)}
+          {itemIds.map(this.renderItem)}
       </div>
     );
   }
