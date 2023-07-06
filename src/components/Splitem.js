@@ -9,7 +9,7 @@ const Splitem = (props) => {
     return <Splpizza
               key={key}
               details={SplList[key]}
-              addToItem={props.addToOrder}
+              addToItem={props.addToItem}
               index={key}
             />
   });
