@@ -30,4 +30,4 @@ class Splpizza extends Component {
   }
 }
 
-export default Pizza;
+export default Splpizza;
