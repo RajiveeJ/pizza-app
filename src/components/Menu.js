@@ -5,6 +5,7 @@ import { Header, Container, Button } from 'semantic-ui-react';
 
 import NavBar from './NavBar';
 import Footer from './Footer';
+import Order from './Order';
 import PizzaContainer from './PizzaContainer';
 
 
@@ -20,7 +21,11 @@ const Menu = (props) => (
       </Container>
       <Container id='menu-pizza-container'>
           <PizzaContainer addToOrder={props.addToOrder} />
-          
+          <Order
+              order={this.props.order}
+              addToOrder={this.props.addToOrder}
+              removeFromOrder={this.props.removeFromOrder}
+            />
       </Container>
      
       
