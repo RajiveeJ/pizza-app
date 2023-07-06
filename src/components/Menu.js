@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, {Component, Fragment } from 'react';
 import { Link  } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Header, Container, Button } from 'semantic-ui-react';
