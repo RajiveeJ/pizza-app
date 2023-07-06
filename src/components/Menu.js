@@ -7,7 +7,6 @@ import NavBar from './NavBar';
 import Footer from './Footer';
 import PizzaContainer from './PizzaContainer';
 
-import Item from './Item';
 
 const Menu = (props) => (
   <Fragment>
