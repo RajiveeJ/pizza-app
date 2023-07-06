@@ -17,17 +17,18 @@ class Menu extends Component {
   addToOrder: PropTypes.func.isRequired,
   addToItem: PropTypes.func.isRequired,
   }
-return(
-  <Fragment>
-    <NavBar order={props.order} orderTotal={props.orderTotal}>
-      {props.orderTotal > 0 && <Button as={Link} to='/cart' color='teal' id='menu-checkout-btn'>Checkout</Button>}
-    </NavBar>
-    <Container id='page-container'>
-      <Header as='h1' id='page-header'>Pizza Selection</Header>
-      <Container textAlign='center' id='menu-free-banner'>
-        <p id='menu-banner-text'>Free delivery for orders over Rs.1000</p>
-      </Container>
-      <Container id='menu-pizza-container'>
+  render(){
+    return(
+      <Fragment>
+         <NavBar order={props.order} orderTotal={props.orderTotal}>
+            {props.orderTotal > 0 && <Button as={Link} to='/cart' color='teal' id='menu-checkout-btn'>Checkout</Button>}
+         </NavBar>
+         <Container id='page-container'>
+         <Header as='h1' id='page-header'>Pizza Selection</Header>
+         <Container textAlign='center' id='menu-free-banner'>
+         <p id='menu-banner-text'>Free delivery for orders over Rs.1000</p>
+         </Container>
+         <Container id='menu-pizza-container'>
           <PizzaContainer addToOrder={props.addToOrder} />
           <Item
              
@@ -41,7 +42,7 @@ return(
     <Footer />
   </Fragment>
 );
-
+}
 }
 
 export default Menu;
