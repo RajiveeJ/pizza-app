@@ -17,6 +17,7 @@ class App extends Component {
 
   state = {
     order: [],
+    item: [],
     orderTotal: 0,
     checkoutTotal: 0,
     postcode:'',
@@ -63,12 +64,12 @@ class App extends Component {
   }
 
   addToItem = (key) => {
-    const order = { ...this.state.order};
-    order[key] = order[key] + 1 || 1;
+    const item = { ...this.state.item};
+    item[key] = item[key] + 1 || 1;
     const newTotal = this.state.orderTotal + SplList[key].price;
 
     this.setState({
-      order: order,
+      item: item,
       orderTotal: newTotal
     });
   }
@@ -90,17 +91,17 @@ class App extends Component {
   }
 
   removeFromItem = (key) => {
-    const order = { ...this.state.order};
-    order[key] = order[key] - 1;
+    const item = { ...this.state.item};
+    item[key] = item[key] - 1;
     let newTotal = this.state.orderTotal - (SplList[key].price);
 
-    if(order[key] === 0) {
+    if(item[key] === 0) {
       newTotal = this.state.orderTotal - SplList[key].price;
-      delete order[key];
+      delete item[key];
     }
 
     this.setState({
-      order: order,
+      item: item,
       orderTotal: newTotal
     });
   }
