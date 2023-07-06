@@ -8,7 +8,9 @@ class Splpizza extends Component {
     addToItem: PropTypes.func.isRequired,
     details: PropTypes.object.isRequired
   }
-
+  close(){
+    alert("Item add Successfully!!!");
+  }
   render(){
     const {name, toppings, image, price } = this.props.details;
     return(
@@ -20,7 +22,7 @@ class Splpizza extends Component {
           <div id='pizza-order-info'>
             <Header as='h3'>{formatPrice(price)}</Header>
             <p>
-              <Button onClick={() => this.props.addToItem(this.props.index)} color='teal'>Add Item</Button>
+              <Button onClick={() => this.close} color='teal'>Add Item</Button>
             </p>
           </div>
 
