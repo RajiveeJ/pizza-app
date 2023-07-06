@@ -9,8 +9,15 @@ import Item from './Item';
 import PizzaContainer from './PizzaContainer';
 
 
-const Menu = (props) => (
-   
+class Menu extends Component {
+
+  static propTypes = {
+   order: PropTypes.array,
+  orderTotal: PropTypes.number,
+  addToOrder: PropTypes.func.isRequired,
+  addToItem: PropTypes.func.isRequired,
+  }
+return(
   <Fragment>
     <NavBar order={props.order} orderTotal={props.orderTotal}>
       {props.orderTotal > 0 && <Button as={Link} to='/cart' color='teal' id='menu-checkout-btn'>Checkout</Button>}
@@ -35,11 +42,6 @@ const Menu = (props) => (
   </Fragment>
 );
 
-Menu.propTypes = {
-  order: PropTypes.array,
-  orderTotal: PropTypes.number,
-  addToOrder: PropTypes.func.isRequired,
-  addToItem: PropTypes.func.isRequired
-};
+}
 
 export default Menu;
