@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Image, Segment, Icon } from 'semantic-ui-react';
+import { Grid, Image, Segment, Icon,Button} from 'semantic-ui-react';
 import { SplList } from '../data/spllist';
 import { formatPrice } from '../helpers';
 
