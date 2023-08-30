@@ -77,7 +77,7 @@ class Home extends Component {
                 <Form.Input placeholder='Enter your postcode' name='postcode' onChange={this.handleChange2} value={this.state.postcode} width={4} required id='home-form3'/>
                 <Form.Button type='submit' color='teal' size='large' width={4} id='home-btn'>Get Started</Form.Button>
               </Form.Group>
-              <Label color='orange' size='medium' id='home-label'><span role='img' aria-label='point-right'>👉</span> Hint: username - admin@gmail.com | demo@gmail.com password - admin123|demo123 postcode 'LDN 123' right now</Label>
+              <Label color='orange' size='medium' id='home-label'><span role='img' aria-label='point-right'>👉</span> Hint: username - demo@gmail.com password - demo123 postcode 'LDN 123' right now</Label>
             </Form>
           </Container>
         </Container>
